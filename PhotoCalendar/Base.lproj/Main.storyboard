@@ -35,9 +35,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDr-QA-k0E">
+                                                    <rect key="frame" x="321" y="8" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="addPhotoToCell:" destination="Mwv-tN-imi" eventType="touchUpInside" id="PaO-32-7yD"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="WbC-Og-a5c" firstAttribute="top" secondItem="5Cj-ve-SYl" secondAttribute="top" constant="8" id="9Bp-hb-6Vl"/>
+                                                <constraint firstItem="CDr-QA-k0E" firstAttribute="leading" secondItem="5Cj-ve-SYl" secondAttribute="leading" constant="321" id="MP5-c8-OyZ"/>
+                                                <constraint firstItem="CDr-QA-k0E" firstAttribute="top" secondItem="5Cj-ve-SYl" secondAttribute="top" constant="8" id="WYn-4p-Neg"/>
                                                 <constraint firstItem="WbC-Og-a5c" firstAttribute="leading" secondItem="5Cj-ve-SYl" secondAttribute="leading" constant="16" id="vjM-HU-vIJ"/>
                                             </constraints>
                                         </tableViewCellContentView>

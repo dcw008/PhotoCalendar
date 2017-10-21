@@ -13,6 +13,7 @@ class MonthCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,4 +25,10 @@ class MonthCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    @IBAction func addPhotoToCell(_ sender: Any) {
+        print("hello")
+    }
+    
+    
 }
