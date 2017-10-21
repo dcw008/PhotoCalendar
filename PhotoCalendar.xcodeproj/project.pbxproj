@@ -56,6 +56,7 @@
 		4CCE11011F9BCCF1000BC009 /* PhotoCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				740600C01F9BE5A900DAFB20 /* API */,
 				4CCE111A1F9BD462000BC009 /* Models */,
 				4CCE11161F9BCFD5000BC009 /* ViewControllers */,
 				4CCE11021F9BCCF1000BC009 /* AppDelegate.swift */,
@@ -81,6 +82,13 @@
 				4CCE11171F9BD31D000BC009 /* MonthCell.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		740600C01F9BE5A900DAFB20 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,12 +7,16 @@
 //
 
 import UIKit
-
-class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol MonthCellImagePickerDelegate {
+    func pickImage(row: Int)
+}
+class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MonthCellImagePickerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var photos = ["Ada", "Derrick", "Tifanny"]
     
+    
+    var row = 2
     
     
     
@@ -40,7 +44,39 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! MonthCell
         cell.nameLabel.text = photos[indexPath.row]
+        cell.delegate = self
+        cell.cellRow = indexPath.row
         return cell
+    }
+    
+    func pickImage(row: Int){
+        self.row = row
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        let section = 0 
+        let row = self.row
+        
+        let indexPath = IndexPath(row: row, section: section)
+        
+        let cell = tableView.cellForRow(at: indexPath) as! MonthCell
+        
+        cell.monthImage.image = originalImage
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     /*
