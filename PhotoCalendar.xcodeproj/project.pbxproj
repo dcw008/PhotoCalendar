@@ -12,6 +12,7 @@
 		4CCE110A1F9BCCF1000BC009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCE11091F9BCCF1000BC009 /* Assets.xcassets */; };
 		4CCE110D1F9BCCF1000BC009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CCE110B1F9BCCF1000BC009 /* LaunchScreen.storyboard */; };
 		4CCE11151F9BCDEE000BC009 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE11141F9BCDEE000BC009 /* CalendarViewController.swift */; };
+		4CCE11181F9BD31D000BC009 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE11171F9BD31D000BC009 /* MonthCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4CCE110C1F9BCCF1000BC009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CCE110E1F9BCCF1000BC009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CCE11141F9BCDEE000BC009 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4CCE11171F9BD31D000BC009 /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		4CCE11011F9BCCF1000BC009 /* PhotoCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				4CCE111A1F9BD462000BC009 /* Models */,
 				4CCE11161F9BCFD5000BC009 /* ViewControllers */,
 				4CCE11021F9BCCF1000BC009 /* AppDelegate.swift */,
 				4CCE11061F9BCCF1000BC009 /* Main.storyboard */,
@@ -70,6 +73,14 @@
 				4CCE11141F9BCDEE000BC009 /* CalendarViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4CCE111A1F9BD462000BC009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CCE11171F9BD31D000BC009 /* MonthCell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCE11181F9BD31D000BC009 /* MonthCell.swift in Sources */,
 				4CCE11151F9BCDEE000BC009 /* CalendarViewController.swift in Sources */,
 				4CCE11031F9BCCF1000BC009 /* AppDelegate.swift in Sources */,
 			);
